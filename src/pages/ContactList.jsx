@@ -44,6 +44,11 @@ const OneContact = styled.div`
   border-bottom: solid 0.5px #fff;
   padding: 10px 0;
   margin: 20px 0;
+  @media (max-width: 725px) {
+    P {
+      min-width: 0%;
+    }
+  }
   p {
     font-size: 12px;
     font-family: system-ui;
@@ -51,16 +56,24 @@ const OneContact = styled.div`
     letter-spacing: 2px;
     color: #6c757d;
     min-width: 20%;
+    margin-bottom: 10px;
+    @media (max-width: 725px) {
+      min-width: 0%;
+    }
   }
   h3 {
     color: #000;
     font-weight: 200;
     font-family: system-ui;
     min-width: 20%;
+    margin-bottom: 10px;
   }
 `;
 
 const ListDiv = styled.div`
+  @media (max-width: 780px) {
+    padding: 10px;
+  }
   h2 {
     margin: 30px 0;
     font-size: 25px;
@@ -72,9 +85,12 @@ const ListDiv = styled.div`
   text-align: center;
   padding: 60px;
   div {
+    @media (max-width: 630px) {
+      flex-direction: column;
+    }
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     button {
       background: none;
@@ -86,6 +102,7 @@ const ListDiv = styled.div`
     }
   }
   span {
+    margin-bottom: 10px;
     svg {
       color: #6c757d;
       transition: all 0.5s ease-in;
